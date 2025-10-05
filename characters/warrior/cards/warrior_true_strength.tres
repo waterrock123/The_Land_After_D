@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://de05txexriprc"]
+
+[ext_resource type="Texture2D" uid="uid://cn2c1psh561cc" path="res://art/tile_0127.png" id="1_rnlwg"]
+[ext_resource type="Script" uid="uid://dlq06ogyy374o" path="res://characters/warrior/cards/warrior_true_strength.cs" id="2_ehbwc"]
+[ext_resource type="AudioStream" uid="uid://cmhxj1426ouav" path="res://art/true_strength.ogg" id="3_4ciyb"]
+
+[resource]
+script = ExtResource("2_ehbwc")
+icon = ExtResource("1_rnlwg")
+tooltip_text = "get 2 Muscle"
+sound = ExtResource("3_4ciyb")
+id = "warrior_true_strenth"
+type = 2
+target = 0
+cost = 3
+exhausts = false
+rarity = 2
+metadata/_custom_type_script = "uid://b8r275cigiyqr"

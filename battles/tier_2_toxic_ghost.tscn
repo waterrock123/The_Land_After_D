@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dahy770xssv3r"]
+
+[ext_resource type="PackedScene" uid="uid://bg3mm0rt6muhq" path="res://scene/enemy/enemy.tscn" id="1_ipcr1"]
+[ext_resource type="Resource" uid="uid://c08dianj1af7c" path="res://enemies/toxic_ghost/toxic_ghost.tres" id="2_gn1xa"]
+[ext_resource type="Resource" uid="uid://gg8ad6h8ryx2" path="res://enemies/bat/bat_enemy.tres" id="3_7v470"]
+
+[node name="Tier2ToxicGhost" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource("1_ipcr1")]
+position = Vector2(980, 413)
+EnemyStats = ExtResource("2_gn1xa")
+
+[node name="Enemy2" parent="." instance=ExtResource("1_ipcr1")]
+position = Vector2(813, 261)
+EnemyStats = ExtResource("3_7v470")
+
+[node name="Enemy3" parent="." instance=ExtResource("1_ipcr1")]
+position = Vector2(1124, 267)
+EnemyStats = ExtResource("3_7v470")

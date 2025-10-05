@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://r4tnhd4u7ydj"]
+
+[node name="SupplyUI" type="HBoxContainer"]
+offset_right = 143.0
+offset_bottom = 48.0
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "166"

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://csfd6spfo0iu3"]
+
+[ext_resource type="Texture2D" uid="uid://dgjfie8bxn6fg" path="res://art/expose.png" id="1_0fhjt"]
+[ext_resource type="Script" uid="uid://bk3ypt05shshe" path="res://scene/ui/StatusTooltip.cs" id="1_eo8ff"]
+
+[node name="StatusTooltip" type="HBoxContainer"]
+custom_minimum_size = Vector2(750, 0)
+offset_right = 750.0
+offset_bottom = 50.0
+theme_override_constants/separation = 20
+script = ExtResource("1_eo8ff")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("1_0fhjt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "在{0}回合内受到的伤害+50%"
+vertical_alignment = 1
+autowrap_mode = 2

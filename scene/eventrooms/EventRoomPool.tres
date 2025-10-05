@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventRoomPool" load_steps=4 format=3 uid="uid://dtjrcop5tya4y"]
+
+[ext_resource type="Script" uid="uid://de34cjbu7wfcp" path="res://custom_resources/EventRoomPool.cs" id="1_d2ybq"]
+[ext_resource type="PackedScene" uid="uid://d0jjd5n0ctc3k" path="res://scene/eventrooms/glod_blood_event.tscn" id="1_lu2hc"]
+[ext_resource type="PackedScene" uid="uid://obluwsk8xa0y" path="res://scene/eventrooms/mush_elf_event.tscn" id="2_f30d6"]
+
+[resource]
+script = ExtResource("1_d2ybq")
+event_rooms = Array[PackedScene]([ExtResource("1_lu2hc"), ExtResource("2_f30d6")])
+metadata/_custom_type_script = "uid://de34cjbu7wfcp"

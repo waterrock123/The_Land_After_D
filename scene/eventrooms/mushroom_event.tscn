@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc0ki2ewbsi41"]
+
+[ext_resource type="Script" uid="uid://cs6rxqq1fi0ij" path="res://scene/eventrooms/MushroomEvent.cs" id="1_ygbhw"]
+[ext_resource type="PackedScene" uid="uid://xkd1luu5jo1x" path="res://scene/eventrooms/event_room_button.tscn" id="5_7jg1e"]
+[ext_resource type="Texture2D" uid="uid://dgtildtcn7iu7" path="res://art/蘑菇精灵.png" id="6_gol23"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aapjg"]
+font_size = 35
+shadow_size = 11
+shadow_color = Color(0.244612, 0.55674, 0.820615, 0.415686)
+
+[node name="MushElfEvent" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ygbhw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0431373, 0.0901961, 0.0352941, 0.815686)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -24.0
+offset_right = 440.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "你在树林深处找到了一具尸体，尸体旁的笔记上写着一些关于蘑菇的研究记录。你收好了笔记，回头时便发现有一只会动的蘑菇跟着你。"
+label_settings = SubResource("LabelSettings_aapjg")
+autowrap_mode = 1
+
+[node name="MushRelicButton" parent="HBoxContainer/VBoxContainer" instance=ExtResource("5_7jg1e")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+text = "将蘑菇收为同伴并离开"
+autowrap_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_gol23")

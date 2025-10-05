@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://co033wo6xxlof"]
+
+[ext_resource type="Texture2D" uid="uid://o1mpu4d51joa" path="res://art/muscle.png" id="1_odh2a"]
+[ext_resource type="Script" uid="uid://7mmjplcspd6w" path="res://statuses/muscle.cs" id="2_odh2a"]
+
+[resource]
+script = ExtResource("2_odh2a")
+id = "muscle"
+type = 2
+stack_type = 1
+can_expire = false
+importduration = 0
+importstacks = 2
+icon = ExtResource("1_odh2a")
+tooltip = "攻击造成伤害增加{0}"
+metadata/_custom_type_script = "uid://cgxbjghlhs42i"

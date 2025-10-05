@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dtdcd8kwggbul"]
+
+[ext_resource type="Texture2D" uid="uid://dgjfie8bxn6fg" path="res://art/expose.png" id="1_0rmh8"]
+[ext_resource type="Script" uid="uid://cvh222eltcp5j" path="res://statuses/exposed.cs" id="1_2f4nr"]
+
+[resource]
+script = ExtResource("1_2f4nr")
+id = "exposed"
+type = 0
+stack_type = 2
+can_expire = true
+importduration = 1
+importstacks = 0
+icon = ExtResource("1_0rmh8")
+tooltip = "易伤：在{0}回合内受到的伤害+50%%"
+metadata/_custom_type_script = "uid://cgxbjghlhs42i"

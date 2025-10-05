@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c6tgpc4nbihs7"]
+
+[ext_resource type="Texture2D" uid="uid://c2xhttrclo1r7" path="res://art/tile_0116.png" id="1_nckqy"]
+[ext_resource type="Script" uid="uid://ca11k7plvfesl" path="res://relics/mana_potion.cs" id="2_nckqy"]
+
+[resource]
+script = ExtResource("2_nckqy")
+relic_name = "法力药水"
+id = "mana_potion"
+type = 1
+character_type = 0
+starter_relic = false
+icon = ExtResource("1_nckqy")
+tooltip = "[color=\"ffdf00\"]无尽法力药水[/color]
+在战斗开始时获得1点能量"
+metadata/_custom_type_script = "uid://bbeyta7yw0qou"

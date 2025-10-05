@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8ngv2ip7al5k"]
+
+[ext_resource type="Script" uid="uid://bcht3gjoc0101" path="res://scene/player/player.cs" id="1_6smn3"]
+[ext_resource type="Texture2D" uid="uid://cpydvk8mq66o5" path="res://art/tile_0087.png" id="1_cm2cf"]
+[ext_resource type="Resource" uid="uid://bnsmay5ns5umx" path="res://characters/warrior/warrior.tres" id="2_5lop3"]
+[ext_resource type="PackedScene" uid="uid://fbrsfeem7s0m" path="res://scene/ui/stats_ui.tscn" id="2_6smn3"]
+[ext_resource type="PackedScene" uid="uid://d4gylus1bs3n2" path="res://scene/status_handler/status_handler.tscn" id="5_ajqqa"]
+[ext_resource type="PackedScene" uid="uid://cucidrt5jmqr2" path="res://scene/modifier_handler/modifier_handler.tscn" id="6_732fb"]
+[ext_resource type="PackedScene" uid="uid://b7iboo1fg2bxl" path="res://scene/modifier_handler/modifier.tscn" id="7_hfhxk"]
+
+[node name="Player" type="Node2D" groups=["player"]]
+script = ExtResource("1_6smn3")
+Stats = ExtResource("2_5lop3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -77)
+scale = Vector2(6.46875, 6.65625)
+texture = ExtResource("1_cm2cf")
+
+[node name="StatsUI" parent="." instance=ExtResource("2_6smn3")]
+offset_left = -152.0
+offset_top = -15.0
+offset_right = 138.0
+offset_bottom = 65.0
+
+[node name="StatusHandler" parent="." node_paths=PackedStringArray("status_owner") instance=ExtResource("5_ajqqa")]
+offset_left = -119.0
+offset_top = 53.0
+offset_right = -119.0
+offset_bottom = 53.0
+status_owner = NodePath("..")
+
+[node name="ModifierHandler" parent="." instance=ExtResource("6_732fb")]
+
+[node name="DamageDealtModifier" parent="ModifierHandler" instance=ExtResource("7_hfhxk")]
+
+[node name="DamageTakenModifier" parent="ModifierHandler" instance=ExtResource("7_hfhxk")]
+type = 1
+
+[node name="CardCostModifier" parent="ModifierHandler" instance=ExtResource("7_hfhxk")]
+type = 2

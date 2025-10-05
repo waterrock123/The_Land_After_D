@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cr7j6put8cmv3"]
+
+[ext_resource type="Texture2D" uid="uid://44jbm5bqr4k" path="res://art/tile_0117.png" id="1_odk1c"]
+[ext_resource type="Script" uid="uid://8yfppocryjuj" path="res://characters/warrior/cards/warrior_big_slam.cs" id="2_jtyte"]
+[ext_resource type="AudioStream" uid="uid://dixklg6g4jnsq" path="res://art/slash.ogg" id="3_0qbpi"]
+
+[resource]
+script = ExtResource("2_jtyte")
+icon = ExtResource("1_odk1c")
+tooltip_text = "[center]造成[color=\"ff0000\"]{0}[/color]点伤害 和  2层[color=\"ffdf00\"]易伤[/color].[/center]"
+sound = ExtResource("3_0qbpi")
+id = "warrior_big_slam"
+type = 0
+target = 1
+cost = 2
+exhausts = true
+rarity = 1
+metadata/_custom_type_script = "uid://b8r275cigiyqr"

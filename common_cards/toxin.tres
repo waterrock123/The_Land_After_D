@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://ccwyf7rdp261t"]
+
+[ext_resource type="Texture2D" uid="uid://psr6xk3k26oh" path="res://art/tile_0114.png" id="1_00gs1"]
+[ext_resource type="Script" uid="uid://b8r275cigiyqr" path="res://custom_resources/Card.cs" id="1_afwg3"]
+
+[resource]
+script = ExtResource("1_afwg3")
+icon = ExtResource("1_00gs1")
+tooltip_text = "[center]减缓你的速度[/center]"
+id = "toxin"
+type = 1
+target = 0
+cost = 1
+exhausts = true
+rarity = 0
+metadata/_custom_type_script = "uid://b8r275cigiyqr"

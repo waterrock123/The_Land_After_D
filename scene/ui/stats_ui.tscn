@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://fbrsfeem7s0m"]
+
+[ext_resource type="Script" uid="uid://l3u8b30bbqnf" path="res://scene/ui/Stats_ui.cs" id="1_2mhnn"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="1_3uftm"]
+[ext_resource type="Theme" uid="uid://73uxshk25khl" path="res://main_theme.tres" id="2_2mhnn"]
+[ext_resource type="PackedScene" uid="uid://cua60ks4ovq1r" path="res://scene/ui/health_ui.tscn" id="4_2mhnn"]
+
+[node name="StatsUI" type="HBoxContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -555.0
+offset_top = 564.0
+offset_right = -275.0
+offset_bottom = 644.0
+grow_horizontal = 2
+alignment = 1
+script = ExtResource("1_2mhnn")
+
+[node name="Block" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="BlockImage" type="TextureRect" parent="Block"]
+custom_minimum_size = Vector2(50, 60)
+layout_mode = 2
+texture = ExtResource("1_3uftm")
+stretch_mode = 5
+
+[node name="BlockLabel" type="Label" parent="Block"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 80)
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_2mhnn")
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health" parent="." instance=ExtResource("4_2mhnn")]
+layout_mode = 2

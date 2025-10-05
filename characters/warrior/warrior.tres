@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharaStats" load_steps=6 format=3 uid="uid://bnsmay5ns5umx"]
+
+[ext_resource type="Script" uid="uid://d135b5gnecby7" path="res://custom_resources/CharaStats.cs" id="1_nliw2"]
+[ext_resource type="Texture2D" uid="uid://cpydvk8mq66o5" path="res://art/tile_0087.png" id="1_xju84"]
+[ext_resource type="Resource" uid="uid://bkioo2d6lt1w2" path="res://characters/warrior/warrior_draftable_cards.tres" id="2_wgifn"]
+[ext_resource type="Resource" uid="uid://d1jk1t5fuer2s" path="res://characters/warrior/warrior_staring_deck.tres" id="3_wgifn"]
+[ext_resource type="Resource" uid="uid://gwhi6htouq7e" path="res://relics/explosive_barriel.tres" id="5_6x0nb"]
+
+[resource]
+script = ExtResource("1_nliw2")
+character_name = "Warrior"
+description = "Lickes to slice things."
+portrait = ExtResource("1_xju84")
+starting_deck = ExtResource("3_wgifn")
+draftable_cards = ExtResource("2_wgifn")
+cards_per_turn = 5
+max_mana = 3
+starting_relic = ExtResource("5_6x0nb")
+MaxHealth = 35
+art = ExtResource("1_xju84")
+metadata/_custom_type_script = "uid://d135b5gnecby7"

@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://73uxshk25khl"]
+
+[ext_resource type="StyleBox" uid="uid://ihkwyb80hcb8" path="res://scene/card_ui/card_dragging_stylebox.tres" id="1_a2l2q"]
+[ext_resource type="StyleBox" uid="uid://bsmjf73hftog0" path="res://scene/card_ui/card_hover_stylebox.tres" id="2_0omi4"]
+[ext_resource type="StyleBox" uid="uid://d160e8iq7v1t7" path="res://scene/card_ui/card_base_stylebox.tres" id="2_58jnp"]
+[ext_resource type="FontFile" uid="uid://c3owu3s8v46ns" path="res://art/字魂像素积木体(商用需授权).ttf" id="4_58jnp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_466ly"]
+bg_color = Color(0.678431, 0.380392, 0.254902, 0.662745)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.60933, 0.60933, 0.60933, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_52mx2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_py0i1"]
+bg_color = Color(0.67719, 0.379354, 0.255092, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0991076, 0.40664, 0.613465, 1)
+
+[resource]
+default_font = ExtResource("4_58jnp")
+default_font_size = 40
+Button/styles/disabled = SubResource("StyleBoxFlat_466ly")
+Button/styles/focus = SubResource("StyleBoxEmpty_52mx2")
+Button/styles/hover = ExtResource("2_0omi4")
+Button/styles/normal = ExtResource("2_58jnp")
+Button/styles/pressed = SubResource("StyleBoxFlat_py0i1")
+Panel/styles/panel = ExtResource("1_a2l2q")
+PanelContainer/styles/panel = ExtResource("2_0omi4")

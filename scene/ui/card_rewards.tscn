@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfwotc608trby"]
+
+[ext_resource type="Script" uid="uid://0glddfun82x4" path="res://scene/ui/CardRewards.cs" id="1_hr3bi"]
+[ext_resource type="PackedScene" uid="uid://blfc0qavmwg4r" path="res://scene/ui/card_menu_ui.tscn" id="1_vej2i"]
+[ext_resource type="Resource" uid="uid://de05txexriprc" path="res://characters/warrior/cards/warrior_true_strength.tres" id="2_4n4nr"]
+[ext_resource type="PackedScene" uid="uid://bnqt28s35u1mm" path="res://scene/ui/card_tooltip_popup.tscn" id="2_6x227"]
+[ext_resource type="Resource" uid="uid://cr7j6put8cmv3" path="res://characters/warrior/cards/warrior_big_slam.tres" id="3_0p8un"]
+[ext_resource type="Resource" uid="uid://bn73idsj257j3" path="res://characters/warrior/cards/warrior_flysword.tres" id="4_vc4i8"]
+
+[node name="CardRewards" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.658824)
+script = ExtResource("1_hr3bi")
+importrewards = Array[Object]([ExtResource("2_4n4nr"), ExtResource("3_0p8un"), ExtResource("4_vc4i8")])
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -20.0
+offset_right = 41.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Cards" type="HBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CardMenuUI" parent="VBoxContainer/Cards" instance=ExtResource("1_vej2i")]
+layout_mode = 2
+
+[node name="CardMenuUI2" parent="VBoxContainer/Cards" instance=ExtResource("1_vej2i")]
+layout_mode = 2
+
+[node name="CardMenuUI3" parent="VBoxContainer/Cards" instance=ExtResource("1_vej2i")]
+layout_mode = 2
+
+[node name="SkipCardReward" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 14)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Skip"
+
+[node name="CardTooltipPopup" parent="." instance=ExtResource("2_6x227")]
+visible = false
+layout_mode = 1
+background_color = Color(0.298039, 0.129412, 0.2, 0.784314)
+
+[node name="TakeButton" type="Button" parent="CardTooltipPopup"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 25.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Take"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://gwhi6htouq7e"]
+
+[ext_resource type="Texture2D" uid="uid://bxa8pkakcodgw" path="res://art/tile_0082.png" id="1_xexbg"]
+[ext_resource type="Script" uid="uid://ctsa3yg1ki82d" path="res://relics/explosive_barriel.cs" id="2_xexbg"]
+
+[resource]
+script = ExtResource("2_xexbg")
+damage = 3
+relic_name = "爆炸桶"
+id = "explosive_barrel"
+type = 0
+character_type = 0
+starter_relic = false
+icon = ExtResource("1_xexbg")
+tooltip = "[color=\"ffdf00\"]爆炸桶[/color]
+回合开始时对所有敌人造成3点伤害"
+metadata/_custom_type_script = "uid://bbeyta7yw0qou"

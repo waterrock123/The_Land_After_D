@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b07cwtx5m3g47"]
+
+[ext_resource type="Texture2D" uid="uid://boklhiqs1414d" path="res://art/tile_0115.png" id="1_ifyi4"]
+[ext_resource type="Script" uid="uid://cui2u0xc51eau" path="res://relics/healing_potion.cs" id="2_ifyi4"]
+
+[resource]
+script = ExtResource("2_ifyi4")
+heal_amount = 6
+relic_name = "无尽治疗药水"
+id = "healing_potion"
+type = 3
+character_type = 2
+starter_relic = true
+icon = ExtResource("1_ifyi4")
+tooltip = "[color=\"ffdf00\"]无尽治疗药水[/color]
+在战斗结束后恢复6点生命"
+metadata/_custom_type_script = "uid://bbeyta7yw0qou"

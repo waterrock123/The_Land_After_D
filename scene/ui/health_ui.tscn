@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cua60ks4ovq1r"]
+
+[ext_resource type="Texture2D" uid="uid://d0edy7thj8ce6" path="res://art/heart.png" id="1_s3oe4"]
+[ext_resource type="Script" uid="uid://bekrj3qfvnf34" path="res://scene/ui/HealthUi.cs" id="1_usg3x"]
+[ext_resource type="Theme" uid="uid://73uxshk25khl" path="res://main_theme.tres" id="2_usg3x"]
+
+[node name="HealthUI" type="HBoxContainer"]
+theme_override_constants/separation = 2
+script = ExtResource("1_usg3x")
+
+[node name="HealthImage" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+texture = ExtResource("1_s3oe4")
+stretch_mode = 5
+
+[node name="HealthLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_usg3x")
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxHealthLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_usg3x")
+text = "/14"
+horizontal_alignment = 1
+vertical_alignment = 1

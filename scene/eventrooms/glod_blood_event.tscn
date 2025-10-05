@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0jjd5n0ctc3k"]
+
+[ext_resource type="Script" uid="uid://br17lfbf4843l" path="res://scene/eventrooms/GlodBloodEvent.cs" id="1_w4x0o"]
+[ext_resource type="PackedScene" uid="uid://xkd1luu5jo1x" path="res://scene/eventrooms/event_room_button.tscn" id="6_ujrto"]
+[ext_resource type="Texture2D" uid="uid://coq03u7j7uge4" path="res://art/换血.png" id="7_nhb02"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aapjg"]
+font_size = 30
+shadow_size = 11
+shadow_color = Color(0.709804, 0, 0.0901961, 0.537255)
+
+[node name="GoldBloodEvent" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w4x0o")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0431373, 0.0901961, 0.0352941, 0.815686)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -24.0
+offset_right = 440.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="DesLabel" type="Label" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "你在荒野上遇到了一位套着黑色袍子的神秘人，他自称是一位医生，正在为研究丧尸瘟疫。他一眼便发现了你的不凡之处，想取一些你的血液进行研究。
+“看看我有什么能交易吧。”"
+label_settings = SubResource("LabelSettings_aapjg")
+autowrap_mode = 1
+
+[node name="OptionContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GoldButton" parent="HBoxContainer/VBoxContainer/OptionContainer" instance=ExtResource("6_ujrto")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 25
+text = "交易金钱：失去{0}点生命，获得{1}金币"
+autowrap_mode = 1
+
+[node name="SupplyButton" parent="HBoxContainer/VBoxContainer/OptionContainer" instance=ExtResource("6_ujrto")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 25
+text = "交易特殊药物：失去{0}点生命，从卡组移除一张牌"
+autowrap_mode = 1
+
+[node name="BackButton" parent="HBoxContainer/VBoxContainer/OptionContainer" instance=ExtResource("6_ujrto")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 25
+text = "这人很可疑，离开"
+
+[node name="Description" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("7_nhb02")

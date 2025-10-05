@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://co4fg7fifn05o"]
+
+[ext_resource type="Texture2D" uid="uid://cqcal03735mv8" path="res://art/tile_0118.png" id="1_eofgd"]
+[ext_resource type="Script" uid="uid://73cvqou5885t" path="res://characters/warrior/cards/warrior_slash.cs" id="2_xnxb8"]
+[ext_resource type="AudioStream" uid="uid://dixklg6g4jnsq" path="res://art/slash.ogg" id="3_kivtu"]
+
+[resource]
+script = ExtResource("2_xnxb8")
+icon = ExtResource("1_eofgd")
+tooltip_text = "[center]对所有敌人造成[color=\"ff0000\"]{0}[/color]伤害[/center]"
+sound = ExtResource("3_kivtu")
+id = "warrior_slash"
+type = 0
+target = 2
+cost = 2
+exhausts = false
+rarity = 0
+metadata/_custom_type_script = "uid://b8r275cigiyqr"
