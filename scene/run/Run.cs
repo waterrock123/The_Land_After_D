@@ -38,6 +38,7 @@ public partial class Run : Node
 	public HealthUi health_ui;
 	public RelicHandler relic_handler;
 	public RelicTooltip relic_tooltip;
+	public SupplyUi supply_ui;
 
 
 	public PauseMenu pause_menu;
@@ -64,9 +65,11 @@ public partial class Run : Node
 		deck_view = (CardPileView)GetNode("%DeckView");
 		gold_ui = (GoldUi)GetNode("%GoldUI");
 		health_ui = (HealthUi)GetNode("%HealthUI");
+		supply_ui = GetNode<SupplyUi>("%SupplyUI");
 		map = GetNode<Map>("Map");
 		relic_handler = GetNode<RelicHandler>("%RelicHandler");
 		relic_tooltip = GetNode<RelicTooltip>("%RelicTooltip");
+
 
 		if (RunStartup.Instance == null)
 		{
@@ -306,6 +309,8 @@ public partial class Run : Node
 		chararcter.StatsChanged += OnStatsChaged;
 		health_ui.UpdateStats(chararcter);
 		gold_ui.importrun_stats = stats;
+		supply_ui.importrun_stats = stats;
+
 
 		relic_handler.AddRelic(chararcter.starting_relic);
 		events.instance.RelicTooltipRequested += relic_tooltip.ShowTooltip;
@@ -355,6 +360,7 @@ public partial class Run : Node
 
 	public void OnMapExited(Room room)
 	{
+		stats.importsupply -= 1;
 		SaveRun(false);
 		switch (room.type)
 		{

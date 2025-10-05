@@ -1,13 +1,20 @@
-[gd_scene format=3 uid="uid://r4tnhd4u7ydj"]
+[gd_scene load_steps=3 format=3 uid="uid://r4tnhd4u7ydj"]
+
+[ext_resource type="Texture2D" uid="uid://ctgapjb1508bh" path="res://art/cake.png" id="1_ta16t"]
+[ext_resource type="Script" uid="uid://cyv0pa71et1tn" path="res://scene/ui/SupplyUi.cs" id="1_xnmjw"]
 
 [node name="SupplyUI" type="HBoxContainer"]
 offset_right = 143.0
 offset_bottom = 48.0
+script = ExtResource("1_xnmjw")
 
 [node name="Icon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 32)
 layout_mode = 2
-expand_mode = 1
+texture = ExtResource("1_ta16t")
 
 [node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
 text = "166"

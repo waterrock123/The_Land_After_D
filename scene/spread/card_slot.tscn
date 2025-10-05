@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqs8y2r7s0hp"]
+
+[ext_resource type="Script" uid="uid://bi0jslaf4jpfn" path="res://scene/spread/CardSlot.cs" id="1_tjg6l"]
+[ext_resource type="StyleBox" uid="uid://bqwmejprwda24" path="res://scene/spread/slot_base_style_box_flat.tres" id="2_otghm"]
+
+[node name="CardSlot" type="Control"]
+custom_minimum_size = Vector2(134, 168)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 130.0
+offset_bottom = 164.0
+script = ExtResource("1_tjg6l")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(130, 164)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_otghm")
+
+[node name="CardContainer" type="AspectRatioContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

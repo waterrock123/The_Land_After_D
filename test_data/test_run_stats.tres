@@ -4,6 +4,9 @@
 
 [resource]
 script = ExtResource("1_sh0jr")
+supply = 15
+importsupply = 15
+gold = 70
 importgold = 1800
 card_rewards = 3
 common_weight = 6.0

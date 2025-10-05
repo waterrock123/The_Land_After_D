@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://0w52qvhwlqyp"]
+
+[ext_resource type="PackedScene" uid="uid://bqs8y2r7s0hp" path="res://scene/spread/card_slot.tscn" id="1_dwq8w"]
+[ext_resource type="Script" uid="uid://cttcu3ynmr2qm" path="res://scene/spread/SpreadUi.cs" id="1_two71"]
+
+[sub_resource type="Gradient" id="Gradient_two71"]
+colors = PackedColorArray(0, 0.568627, 0.662745, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xd2yw"]
+gradient = SubResource("Gradient_two71")
+fill_to = Vector2(1, 1)
+
+[node name="Spread" type="Control"]
+custom_minimum_size = Vector2(430, 520)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 441.0
+offset_bottom = 532.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_two71")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(430, 520)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="CardSlotHolder" type="GridContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="CardSlot" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="CardSlot2" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="CardSlot3" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="CardSlot4" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="CardSlot5" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="CardSlot6" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="CardSlot7" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="CardSlot8" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="CardSlot9" parent="MarginContainer/CardSlotHolder" instance=ExtResource("1_dwq8w")]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_xd2yw")

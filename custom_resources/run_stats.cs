@@ -16,7 +16,7 @@ public partial class run_stats : Resource
     public const double BASE_RARE_WEIGHT = 0.3;
     public const int BASE_SUPPLY = 17;
     [Export]
-    public int supply;
+    public int supply=BASE_SUPPLY;
     [Export]
     public int importsupply
     {

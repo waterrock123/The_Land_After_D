@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Spread" load_steps=2 format=3 uid="uid://c1q6xtmn5lu6v"]
+
+[ext_resource type="Script" uid="uid://dxaavwjm62yia" path="res://scene/spread/Spread.cs" id="1_reg37"]
+
+[resource]
+script = ExtResource("1_reg37")
+MainSlotIndex = Array[int]([5])
+IsLockIndex = Array[int]([1, 2, 3, 7, 8, 9])
+metadata/_custom_type_script = "uid://dxaavwjm62yia"

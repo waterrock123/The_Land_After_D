@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7l7anuyadgo0"]
+[gd_scene load_steps=13 format=3 uid="uid://c7l7anuyadgo0"]
 
 [ext_resource type="Script" uid="uid://b7k7xn81tqtlh" path="res://scene/run/Run.cs" id="1_2vrtk"]
 [ext_resource type="PackedScene" uid="uid://xpjyyoy3utw5" path="res://scene/map/map.tscn" id="2_xx2sb"]
 [ext_resource type="PackedScene" uid="uid://cua60ks4ovq1r" path="res://scene/ui/health_ui.tscn" id="4_6joqh"]
 [ext_resource type="PackedScene" uid="uid://c0trp7howp1es" path="res://scene/ui/gold_ui.tscn" id="4_8lj5q"]
 [ext_resource type="PackedScene" uid="uid://c0oo63s8vw2bl" path="res://scene/ui/card_pile_opener.tscn" id="4_te63u"]
+[ext_resource type="PackedScene" uid="uid://r4tnhd4u7ydj" path="res://scene/ui/supply_ui.tscn" id="5_0buch"]
 [ext_resource type="Texture2D" uid="uid://cv2sl3txbty2c" path="res://art/deck.png" id="5_8lj5q"]
 [ext_resource type="PackedScene" uid="uid://c6m2yyuiuadn2" path="res://scene/ui/card_pile_view.tscn" id="6_6joqh"]
 [ext_resource type="PackedScene" uid="uid://bfu0h0rdp2jm7" path="res://scene/relic_handler/relic_handler.tscn" id="6_p36vy"]
@@ -87,6 +88,12 @@ show_max_hp = true
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+
+[node name="SupplyUI" parent="TopBar/BarItems" instance=ExtResource("5_0buch")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(143, 48)
+layout_mode = 2
+size_flags_vertical = 4
 
 [node name="RelicHandlerContainer" type="CenterContainer" parent="TopBar/BarItems"]
 layout_mode = 2
