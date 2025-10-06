@@ -8,6 +8,7 @@
 script = ExtResource("2_jtyte")
 icon = ExtResource("1_odk1c")
 tooltip_text = "[center]造成[color=\"ff0000\"]{0}[/color]点伤害 和  2层[color=\"ffdf00\"]易伤[/color].[/center]"
+description_text = ""
 sound = ExtResource("3_0qbpi")
 id = "warrior_big_slam"
 type = 0

@@ -13,8 +13,12 @@ public partial class Card : Resource
     public Texture icon { get; set; }
     [Export(PropertyHint.MultilineText)]
     public string tooltip_text { get; set; }
+    [Export(PropertyHint.MultilineText)]
+    public string description_text { get; set; }
     [Export]
     public AudioStream sound { get; set; }
+    [Export]
+    public string name;
 
     public enum Type
     {
@@ -101,6 +105,10 @@ public partial class Card : Resource
     public virtual string GetDefaultTooltip()
     {
         return tooltip_text;
+    }
+    public virtual string GetDescription()
+    {
+        return description_text;
     }
 
     public virtual string GetUpdatedTooltip(ModifierHandler playermodifiers, ModifierHandler enemymodifiers)

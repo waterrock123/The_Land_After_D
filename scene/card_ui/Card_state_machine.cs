@@ -6,6 +6,7 @@ public partial class Card_state_machine : Node
 {
 	[Export]
 	card_state initial_state { get; set; }
+	[Export]
 	public card_state current_state;
 	public Dictionary<card_state.State, card_state> states = new();
 

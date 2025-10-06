@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c3owu3s8v46ns"
-path="res://.godot/imported/字魂像素积木体(商用需授权).ttf-8b87feebfb4af61566fa4905084975f0.fontdata"
+uid="uid://b63g0c6g82c8"
+path="res://.godot/imported/SourceHanSansOLD-Bold-2.otf-0b1b26e594823a689f4eaf6a53e8ba04.fontdata"
 
 [deps]
 
-source_file="res://art/字魂像素积木体(商用需授权).ttf"
-dest_files=["res://.godot/imported/字魂像素积木体(商用需授权).ttf-8b87feebfb4af61566fa4905084975f0.fontdata"]
+source_file="res://art/SourceHanSansOLD-Bold-2.otf"
+dest_files=["res://.godot/imported/SourceHanSansOLD-Bold-2.otf-0b1b26e594823a689f4eaf6a53e8ba04.fontdata"]
 
 [params]
 

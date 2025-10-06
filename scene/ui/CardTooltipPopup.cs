@@ -49,7 +49,7 @@ public partial class CardTooltipPopup : Control
 		tooltip_card.AddChild(new_card);
 		new_card.importcard = card;
 		new_card.TooltipRequested += (_)=>hide_tooltip();
-		card_description.Text = card.GetDefaultTooltip();
+		card_description.Text = card.GetDescription();
 		Show();
 	}
 	public void hide_tooltip()

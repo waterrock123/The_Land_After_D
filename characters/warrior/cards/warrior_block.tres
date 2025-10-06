@@ -8,7 +8,9 @@
 script = ExtResource("2_5nea4")
 icon = ExtResource("1_5nea4")
 tooltip_text = "[center]获得[color=\"0044ff\"]{0}[/color]点护甲[/center]"
+description_text = ""
 sound = ExtResource("3_1eir7")
+name = ""
 id = "warrior_block"
 type = 1
 target = 0

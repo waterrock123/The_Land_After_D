@@ -19,6 +19,7 @@ public partial class CardSlot : Control
 
     public AspectRatioContainer card_container;
     public Panel panel;//牌位视觉表现
+    
 
 
     public override void _Ready()
@@ -50,8 +51,35 @@ public partial class CardSlot : Control
         card_container.AddChild(place_cardui);
         IsEmpty = false;
     }
+    
+    
+    
+    // 获取当前卡槽的世界（全局）中心点（用于吸附目标）
+    // 注意：Control 上使用 GetGlobalRect() 来获取全球坐标和大小
+    public Vector2 GetCenterGlobal()
+    {
+        Rect2 g = GetGlobalRect();
+        return g.Position + g.Size * 0.5f;
+    }
+
+    //撤回卡槽功能
+    public void ClearSlot()
+    {
+        if (card_container.GetChildCount() > 0)
+        {
+            card_container.GetChild(0).QueueFree();
+            
+        }
+        IsEmpty = true;
+        Update();
+    }
+
+
+
+
+
     // 拖放基础逻辑
-    public  bool CanDropData( Variant data)
+    public bool CanDropData(Variant data)
     {
         return !Islocked && data.Obj is Card && IsEmpty;
     }

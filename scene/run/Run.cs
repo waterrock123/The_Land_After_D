@@ -271,6 +271,7 @@ public partial class Run : Node
 		if (current_view.GetChildCount() > 0)
 		{
 			current_view.GetChild(0).QueueFree();//删掉旧场景,在退出场景时
+			stats.importsupply -= 1;
 		}
 		map.ShowMap();
 		map.UnlockNextRooms();
@@ -360,7 +361,7 @@ public partial class Run : Node
 
 	public void OnMapExited(Room room)
 	{
-		stats.importsupply -= 1;
+		
 		SaveRun(false);
 		switch (room.type)
 		{

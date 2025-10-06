@@ -20,6 +20,7 @@ public partial class warrior_axe_attack : Card
 
 	public override string GetUpdatedTooltip(ModifierHandler playermodifiers, ModifierHandler enemymodifiers)
 	{
+		
 		var modified_dmg = playermodifiers.GetModifiedValue(base_damage, Modifier.Type.DMG_DEALT);
 		if (enemymodifiers != null)
 		{
@@ -27,7 +28,6 @@ public partial class warrior_axe_attack : Card
 		}
 
 		return string.Format(tooltip_text, modified_dmg);
-
         
     }
 

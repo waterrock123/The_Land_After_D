@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqs8y2r7s0hp"]
+[gd_scene load_steps=4 format=3 uid="uid://bqs8y2r7s0hp"]
 
 [ext_resource type="Script" uid="uid://bi0jslaf4jpfn" path="res://scene/spread/CardSlot.cs" id="1_tjg6l"]
 [ext_resource type="StyleBox" uid="uid://bqwmejprwda24" path="res://scene/spread/slot_base_style_box_flat.tres" id="2_otghm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otghm"]
+size = Vector2(134, 168)
 
 [node name="CardSlot" type="Control"]
 custom_minimum_size = Vector2(134, 168)
@@ -29,3 +32,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Cardholderarea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cardholderarea"]
+position = Vector2(67, 84)
+shape = SubResource("RectangleShape2D_otghm")

@@ -21,7 +21,6 @@ public partial class warrior_block : Card
 	public override string GetUpdatedTooltip(ModifierHandler playermodifiers, ModifierHandler enemymodifiers)
 	{
 		return string.Format(tooltip_text, base_block);
-
         
     }
 

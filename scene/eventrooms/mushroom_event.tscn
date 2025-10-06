@@ -1,8 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc0ki2ewbsi41"]
+[gd_scene load_steps=5 format=3 uid="uid://b1c65geepjnjo"]
 
-[ext_resource type="Script" uid="uid://cs6rxqq1fi0ij" path="res://scene/eventrooms/MushroomEvent.cs" id="1_ygbhw"]
 [ext_resource type="PackedScene" uid="uid://xkd1luu5jo1x" path="res://scene/eventrooms/event_room_button.tscn" id="5_7jg1e"]
 [ext_resource type="Texture2D" uid="uid://dgtildtcn7iu7" path="res://art/蘑菇精灵.png" id="6_gol23"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_3k8wb"]
+script/source = "using Godot;
+using System;
+
+public partial class MushroomEvent : EventRoom
+{
+}
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_aapjg"]
 font_size = 35
@@ -16,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ygbhw")
+script = SubResource("CSharpScript_3k8wb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

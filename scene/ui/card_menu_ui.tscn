@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://blfc0qavmwg4r"]
 
 [ext_resource type="Script" uid="uid://jwcs03gpifgv" path="res://scene/ui/CardMenuUi.cs" id="1_8j7iv"]
-[ext_resource type="Resource" uid="uid://ckno72ffkxc58" path="res://characters/warrior/cards/warrior_block.tres" id="2_8j7iv"]
+[ext_resource type="Resource" uid="uid://cr7j6put8cmv3" path="res://characters/warrior/cards/warrior_big_slam.tres" id="2_v4vb2"]
 [ext_resource type="PackedScene" uid="uid://suko32ycvk8i" path="res://scene/ui/card_visuals.tscn" id="3_v4vb2"]
 
 [node name="CardMenuUI" type="CenterContainer"]
@@ -9,7 +9,7 @@ offset_right = 130.0
 offset_bottom = 164.0
 size_flags_horizontal = 3
 script = ExtResource("1_8j7iv")
-importcard = ExtResource("2_8j7iv")
+importcard = ExtResource("2_v4vb2")
 
 [node name="Visuals" parent="." instance=ExtResource("3_v4vb2")]
 custom_minimum_size = Vector2(130, 164)

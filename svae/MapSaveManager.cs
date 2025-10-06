@@ -23,6 +23,8 @@ public class RoomData
 
     // 如果是怪物房/Boss房，保存战斗信息
     public BattleStatsData battleStats; // 保存战斗信息 
+    //如果是事件房,保存事件信息
+    public string event_scene_path;
 }
 
 /// <summary>
@@ -77,6 +79,7 @@ public static class MapSaveManager
                 rd.selected = room.selected;
                 rd.posX = room.position.X;
                 rd.posY = room.position.Y;
+                rd.event_scene_path = room.event_scene != null ? room.event_scene.ResourcePath : "";
 
                 // 保存 battleStats
                 if (room.BattleStats != null)
@@ -156,7 +159,7 @@ public static class MapSaveManager
             r.type = Enum.Parse<Room.Type>(rd.type);
             r.selected = rd.selected;
             r.position=new Vector2(rd.posX, rd.posY);
-
+            r.event_scene = !string.IsNullOrEmpty(rd.event_scene_path) ? GD.Load<PackedScene>(rd.event_scene_path) : null;
             if (rd.battleStats != null)
             {
                 r.BattleStats = new battle_stats()

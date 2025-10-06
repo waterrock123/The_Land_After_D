@@ -8,7 +8,9 @@
 script = ExtResource("2_xnxb8")
 icon = ExtResource("1_eofgd")
 tooltip_text = "[center]对所有敌人造成[color=\"ff0000\"]{0}[/color]伤害[/center]"
+description_text = "战士在抡斧子时总会忍不住转起来"
 sound = ExtResource("3_kivtu")
+name = "横扫"
 id = "warrior_slash"
 type = 0
 target = 2

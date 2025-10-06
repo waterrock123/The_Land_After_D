@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://0w52qvhwlqyp"]
+[gd_scene load_steps=10 format=3 uid="uid://0w52qvhwlqyp"]
 
 [ext_resource type="PackedScene" uid="uid://bqs8y2r7s0hp" path="res://scene/spread/card_slot.tscn" id="1_dwq8w"]
 [ext_resource type="Script" uid="uid://cttcu3ynmr2qm" path="res://scene/spread/SpreadUi.cs" id="1_two71"]
+[ext_resource type="Resource" uid="uid://c1q6xtmn5lu6v" path="res://scene/spread/warrior_spread.tres" id="2_3sns7"]
 
 [sub_resource type="Gradient" id="Gradient_two71"]
 colors = PackedColorArray(0, 0.568627, 0.662745, 0, 1, 1, 1, 0)
@@ -10,17 +11,74 @@ colors = PackedColorArray(0, 0.568627, 0.662745, 0, 1, 1, 1, 0)
 gradient = SubResource("Gradient_two71")
 fill_to = Vector2(1, 1)
 
+[sub_resource type="Animation" id="Animation_3sns7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+
+[sub_resource type="Animation" id="Animation_o6mej"]
+resource_name = "shrink"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.3, 0.3)]
+}
+
+[sub_resource type="Animation" id="Animation_hcnax"]
+resource_name = "expand"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.3, 0.3), Vector2(0.6, 0.6), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3sns7"]
+_data = {
+&"RESET": SubResource("Animation_3sns7"),
+&"expand": SubResource("Animation_hcnax"),
+&"shrink": SubResource("Animation_o6mej")
+}
+
 [node name="Spread" type="Control"]
 custom_minimum_size = Vector2(430, 520)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 11.0
-offset_top = 12.0
-offset_right = 441.0
-offset_bottom = 532.0
+offset_left = 293.0
+offset_top = 16.0
+offset_right = 723.0
+offset_bottom = 536.0
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(0, 260)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_two71")
+spread = ExtResource("2_3sns7")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(430, 520)
@@ -74,3 +132,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_xd2yw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3sns7")
+}

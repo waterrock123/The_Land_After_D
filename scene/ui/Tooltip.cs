@@ -33,7 +33,7 @@ public partial class Tooltip : PanelContainer
 	//中转函数
 	private void OnCardTooltipRequested(Texture icon,string tooltip_text)
 	{
-		ShowTooltip(icon, tooltip_text);
+		//ShowTooltip(icon, tooltip_text);
 	}
 	public void ShowTooltip(Texture icon, String text)
 	{

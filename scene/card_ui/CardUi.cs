@@ -82,9 +82,12 @@ public partial class CardUi : Control
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
+		var enemy_modifiers = GetActiveEnemyModifiers();
+		var updated_tooltip = card.GetUpdatedTooltip(player_modifiers, enemy_modifiers);
+		//测试
+		cardvisuals.tooltip.Text = updated_tooltip;
 	}
-
+	
 	public ModifierHandler GetActiveEnemyModifiers()
 	{
 		if (targets.Count == 0 || targets.Count > 1 || !(targets[0] is Enemy))
@@ -98,6 +101,8 @@ public partial class CardUi : Control
 	{
 		var enemy_modifiers = GetActiveEnemyModifiers();
 		var updated_tooltip = card.GetUpdatedTooltip(player_modifiers, enemy_modifiers);
+		//测试
+		cardvisuals.tooltip.Text = updated_tooltip;
 
 		events.instance.EmitSignal(events.SignalName.CardTooltipRequested, card.icon,updated_tooltip);
 	}

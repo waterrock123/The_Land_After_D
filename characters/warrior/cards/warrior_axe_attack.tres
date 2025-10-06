@@ -8,7 +8,9 @@
 script = ExtResource("2_ungqh")
 icon = ExtResource("1_ungqh")
 tooltip_text = "[center]造成[color=\"ff0000\"]{0}[/color]点伤害[/center]"
+description_text = "吃我一斧子"
 sound = ExtResource("3_6uoki")
+name = ""
 id = "warrior_axe_attack"
 type = 0
 target = 1

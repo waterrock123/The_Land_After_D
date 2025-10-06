@@ -3,7 +3,7 @@
 [ext_resource type="StyleBox" uid="uid://ihkwyb80hcb8" path="res://scene/card_ui/card_dragging_stylebox.tres" id="1_a2l2q"]
 [ext_resource type="StyleBox" uid="uid://bsmjf73hftog0" path="res://scene/card_ui/card_hover_stylebox.tres" id="2_0omi4"]
 [ext_resource type="StyleBox" uid="uid://d160e8iq7v1t7" path="res://scene/card_ui/card_base_stylebox.tres" id="2_58jnp"]
-[ext_resource type="FontFile" uid="uid://c3owu3s8v46ns" path="res://art/字魂像素积木体(商用需授权).ttf" id="4_58jnp"]
+[ext_resource type="FontFile" uid="uid://b63g0c6g82c8" path="res://art/SourceHanSansOLD-Bold-2.otf" id="4_58jnp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_466ly"]
 bg_color = Color(0.678431, 0.380392, 0.254902, 0.662745)

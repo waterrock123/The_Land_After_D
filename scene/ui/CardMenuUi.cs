@@ -39,12 +39,17 @@ public partial class CardMenuUi : CenterContainer
 	public async Task SetCard(Card value)
 	{
 		if (!IsNodeReady())
-		{
-			await ToSignal(this, "ready");
-		}
-		card = value;
-		visuals.importcard = card;
-		
+        await ToSignal(this, "ready");
+
+    	// 确保 visuals 节点也完成 Ready
+    	if (visuals == null)
+        visuals = GetNode<CardVisuals>("Visuals");
+
+    	if (!visuals.IsNodeReady())
+        await ToSignal(visuals, "ready");
+
+    	card = value;
+    	await visuals.SetCard(card); // 注意这里也 await，保证 tooltip 等都被正确设置
 	}
 	
 }

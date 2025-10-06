@@ -20,9 +20,9 @@ public partial class events : Node
 	[Signal]
 	public delegate void CardDragEndedEventHandler(CardUi card_ui);
 	[Signal]
-	public delegate void CardTooltipRequestedEventHandler(Texture icon,string tooltip_text);
+	public delegate void CardTooltipRequestedEventHandler(Texture icon,string tooltip_text);//请求提示
 	[Signal]
-	public delegate void TooltipHideRequestedEventHandler();
+	public delegate void TooltipHideRequestedEventHandler();//隐藏提示
 
 	//玩家相关事件
 	[Signal]

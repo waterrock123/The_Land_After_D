@@ -18,7 +18,7 @@ public partial class EventRoomButton : Button
         }
         if (IsEndButton)
         {
-            GD.Print("发出信号了");
+            
             events.instance.EmitSignal(events.SignalName.EventRoomExited);
         }
 
