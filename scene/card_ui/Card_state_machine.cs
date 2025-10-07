@@ -1,6 +1,7 @@
 using Godot;
 using Godot.Collections;
 using System;
+using System.Runtime.CompilerServices;
 
 public partial class Card_state_machine : Node
 {
@@ -59,7 +60,7 @@ public partial class Card_state_machine : Node
 	private void OnTransitionRequested(card_state from, long Stateto)
 	{
 		card_state.State to = (card_state.State)(int)Stateto;
-		if (from != current_state)
+		if (from != current_state||from is card_released_state)
 		{
 			return;
 		}

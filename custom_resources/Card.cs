@@ -86,7 +86,7 @@ public partial class Card : Resource
     public void play(Array<Node> targets, CharaStats charstats, ModifierHandler modifiers)
     {
         events.instance.EmitSignal(events.SignalName.CardPlayed, this);
-        charstats.MANA -= cost;
+        // charstats.MANA -= cost;
 
         if (IsSingleTargeted())
         {

@@ -3,13 +3,14 @@ using System;
 
 public partial class card_state : Node
 {
-	public enum State
+    public enum State
     {
         BASE,
         CLICKED,
         DRAGGING,
         AIMING,
-        RELEASED
+        RELEASED,
+        INSLOT
     }
 
 	[Signal]

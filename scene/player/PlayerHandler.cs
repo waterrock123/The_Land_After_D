@@ -74,6 +74,7 @@ public partial class PlayerHandler : Node
 	{
 		character.Block = 0;
 		character.ResetMana();
+		character.ResetMotivate();
 		relics.ActivateRelicsByType(Relic.Type.START_OF_TURN);
 
 	}

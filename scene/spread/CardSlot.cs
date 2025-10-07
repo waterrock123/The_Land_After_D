@@ -42,20 +42,20 @@ public partial class CardSlot : Control
         }
     }
 
-
-    //往牌位内放置牌
-    public void PlaceCard(Card card)
+    public void CardMotivate()
     {
-        var place_cardui = CARD_MENU_UI_SCENE.Instantiate() as CardMenuUi;
-        place_cardui.importcard = card;
-        card_container.AddChild(place_cardui);
-        IsEmpty = false;
+        if (card_container.GetChildCount() == 0)
+        {
+            return;
+        }
+        var cardUi = card_container.GetChild(0) as CardUi;
+        IsEmpty = true;
+        var slot_state = cardUi.card_state_machine.current_state as card_inslot_state;
+        slot_state.Pass(); 
     }
-    
-    
-    
-    // 获取当前卡槽的世界（全局）中心点（用于吸附目标）
-    // 注意：Control 上使用 GetGlobalRect() 来获取全球坐标和大小
+
+
+   
     public Vector2 GetCenterGlobal()
     {
         Rect2 g = GetGlobalRect();
@@ -84,11 +84,7 @@ public partial class CardSlot : Control
         return !Islocked && data.Obj is Card && IsEmpty;
     }
 
-    public  void DropData(Variant data)
-    {
-        if (data.Obj is Card card)
-            PlaceCard(card);
-    }
+    
 
 
 

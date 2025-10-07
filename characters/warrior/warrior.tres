@@ -16,6 +16,7 @@ draftable_cards = ExtResource("2_wgifn")
 cards_per_turn = 5
 max_mana = 3
 starting_relic = ExtResource("5_6x0nb")
+motivate_max = 2
 MaxHealth = 35
 art = ExtResource("1_xju84")
 metadata/_custom_type_script = "uid://d135b5gnecby7"

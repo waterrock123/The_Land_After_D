@@ -21,6 +21,17 @@ public partial class CharaStats : Stats
     public int max_mana;
     [Export]
     public Relic starting_relic;//初始遗物
+    [Export]
+    public int motivate_max;//每回合激发牌阵数
+    public int motivate_count;
+    public int Motivate
+    {
+        get => motivate_count;
+        set{
+            motivate_count = Mathf.Clamp(value, 0, 9999);
+            EmitSignal(SignalName.StatsChanged);
+        }
+    }
 
     private int mana;
     public int MANA
@@ -28,7 +39,7 @@ public partial class CharaStats : Stats
         get => mana;
         set
         {
-            mana = Mathf.Clamp(value, -5, 9999);
+            mana = Mathf.Clamp(value, 0, 9999);
             EmitSignal(SignalName.StatsChanged);
         }
     }
@@ -39,6 +50,10 @@ public partial class CharaStats : Stats
     public void ResetMana()
     {
         this.MANA = max_mana;
+    }
+    public void ResetMotivate()
+    {
+        this.Motivate = motivate_max;
     }
     public override void TakeDamage(int damage)
     {
@@ -60,6 +75,7 @@ public partial class CharaStats : Stats
         instance.Health = MaxHealth;
         instance.Block = 0;
         instance.ResetMana();
+        instance.ResetMotivate();
         instance.deck =(Cardpile)instance.starting_deck.Duplicate();
         instance.draw_pile = new Cardpile();
         instance.discard = new Cardpile();

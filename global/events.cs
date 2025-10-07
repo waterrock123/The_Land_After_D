@@ -19,10 +19,22 @@ public partial class events : Node
 	public delegate void CardDragStartedEventHandler(CardUi card_ui);
 	[Signal]
 	public delegate void CardDragEndedEventHandler(CardUi card_ui);
+	
 	[Signal]
 	public delegate void CardTooltipRequestedEventHandler(Texture icon,string tooltip_text);//请求提示
 	[Signal]
 	public delegate void TooltipHideRequestedEventHandler();//隐藏提示
+
+
+	//牌阵相关事件
+	[Signal]
+	public delegate void SpreadMotivateEventHandler();//牌阵激发事件
+	[Signal]
+	public delegate void SpreadMotivateEndedEventHandler();//激发完毕
+	[Signal]
+	public delegate void CardSlotRequestedEventHandler();//	正在拖动的卡牌请求进入牌阵;
+	[Signal]
+	public delegate void CardSlotOutEventHandler(CardUi cardUi);
 
 	//玩家相关事件
 	[Signal]

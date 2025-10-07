@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjhhrbyw6myv"]
+
+[ext_resource type="Theme" uid="uid://73uxshk25khl" path="res://main_theme.tres" id="1_5kxrj"]
+[ext_resource type="Script" uid="uid://dtmvgwfy3xrd2" path="res://scene/ui/MotivateCountUi.cs" id="2_5kxrj"]
+
+[node name="MotivateUI" type="Panel"]
+custom_minimum_size = Vector2(78, 50)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -512.0
+offset_right = 122.0
+offset_bottom = -462.0
+grow_vertical = 0
+theme = ExtResource("1_5kxrj")
+script = ExtResource("2_5kxrj")
+
+[node name="MotivateLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2/2"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -10,6 +10,7 @@ icon = ExtResource("1_rnlwg")
 tooltip_text = "get 2 Muscle"
 description_text = ""
 sound = ExtResource("3_4ciyb")
+name = ""
 id = "warrior_true_strenth"
 type = 2
 target = 0

@@ -12,7 +12,7 @@ public partial class hand : HBoxContainer
 	public override void _Ready()
 	{
 		cardUi = (PackedScene)ResourceLoader.Load("res://scene/card_ui/card_ui.tscn");
-		//测试代码
+		
 		// var card = GD.Load<Card>("res://characters/warrior/cards/warrior_axe_attack.tres");
 		// AddCard(card);
 		
@@ -54,7 +54,11 @@ public partial class hand : HBoxContainer
 	}
 	public void OnCardUiReparentRequested(CardUi child)
 	{
-		
+		if (child == null || !IsInstanceValid(child))
+    {
+        GD.PrintErr("[hand] ReparentRequested received null or freed CardUi — ignored.");
+        return;
+    }
 		child.Reparent(this);
 		var NewIndex = Math.Clamp(child.OriginalIndex, 0, GetChildCount());
 		CallDeferred("move_child", child, NewIndex);

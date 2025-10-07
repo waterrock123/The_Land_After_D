@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bgfdahils4cxy"]
+[gd_scene load_steps=15 format=3 uid="uid://bgfdahils4cxy"]
 
 [ext_resource type="Script" uid="uid://lbdmfjq4e58f" path="res://scene/player/PlayerHandler.cs" id="1_xtrii"]
 [ext_resource type="Script" uid="uid://dg6rknmbw1c4c" path="res://scene/ui/battle_ui.cs" id="2_le3rm"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://jcqf1tpjr4f6" path="res://art/discard.png" id="8_cwk5c"]
 [ext_resource type="PackedScene" uid="uid://0w52qvhwlqyp" path="res://scene/spread/spread_ui.tscn" id="9_le3rm"]
 [ext_resource type="PackedScene" uid="uid://c8ngv2ip7al5k" path="res://scene/player/player.tscn" id="10_86c4n"]
+[ext_resource type="Script" uid="uid://bu7dubachgbbs" path="res://scene/enemy/EnemyHandler.cs" id="11_hef02"]
+[ext_resource type="PackedScene" uid="uid://bg3mm0rt6muhq" path="res://scene/enemy/enemy.tscn" id="12_cwk5c"]
+[ext_resource type="Resource" uid="uid://vkt58cwqwgsp" path="res://enemies/crab/crab_enemy.tres" id="13_cxpib"]
+[ext_resource type="Resource" uid="uid://gg8ad6h8ryx2" path="res://enemies/bat/bat_enemy.tres" id="14_k8wix"]
 
 [node name="TestBattle" type="Node2D"]
 
@@ -113,3 +117,18 @@ offset_bottom = 610.0
 
 [node name="Player" parent="." instance=ExtResource("10_86c4n")]
 position = Vector2(266, 457)
+
+[node name="EnemyHandler" type="Node2D" parent="."]
+script = ExtResource("11_hef02")
+
+[node name="CrabEnemy" parent="EnemyHandler" instance=ExtResource("12_cwk5c")]
+position = Vector2(647, 420)
+EnemyStats = ExtResource("13_cxpib")
+
+[node name="BatEnemy" parent="EnemyHandler" instance=ExtResource("12_cwk5c")]
+position = Vector2(857, 334)
+EnemyStats = ExtResource("14_k8wix")
+
+[node name="BatEnemy2" parent="EnemyHandler" instance=ExtResource("12_cwk5c")]
+position = Vector2(1168, 389)
+EnemyStats = ExtResource("14_k8wix")

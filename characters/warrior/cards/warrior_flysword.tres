@@ -10,6 +10,7 @@ icon = ExtResource("1_hm00s")
 tooltip_text = "[center]对一个敌人造成[color=\"ff0000\"]{0}[/color]点伤害两次[/center]"
 description_text = ""
 sound = ExtResource("3_v3og7")
+name = ""
 id = "warrior_flysword"
 type = 0
 target = 1

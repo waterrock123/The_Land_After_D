@@ -63,6 +63,7 @@ state = 3
 
 [node name="CardInslotState" type="Node" parent="CardStateMachine"]
 script = ExtResource("10_1vc4d")
+state = 5
 
 [connection signal="gui_input" from="." to="." method="_GuiInput"]
 [connection signal="mouse_entered" from="." to="." method="_OnMouseEntered"]

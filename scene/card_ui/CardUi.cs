@@ -8,7 +8,7 @@ public partial class CardUi : Control
 {
 	[Signal]
 	public delegate void ReparentRequestedEventHandler(CardUi which_card_ui);
-	private Card_state_machine card_state_machine;
+	public Card_state_machine card_state_machine;
 	public Card card;
 	[Export]
 	public Card import_card
@@ -37,7 +37,8 @@ public partial class CardUi : Control
 	//以上是ui相关
 	//下面是拖动区域
 	public Area2D droppointdetec;
-	
+	public bool CanDrop=false;//是否可放入牌阵
+	public int slot_index=-1;//追踪在牌阵中的位置
 	public Godot.Collections.Array<Node> targets;
 	public Control parent;
 	public Tween tween;

@@ -21,6 +21,11 @@ public partial class card_base_state : card_state
 		{
 			await ToSignal(cardUi, "ready");
 		}
+		// if (cardUi.GetParent()?.Name == "CardContainer")
+    	// {
+        // GD.Print($"[card_base_state] Skip Reparent for card {cardUi.Name} because parent is {cardUi.GetParent()?.Name}");
+        // return;
+    	// }
 		if (cardUi.tween != null && cardUi.tween.IsRunning())
 		{
 			cardUi.tween.Kill();

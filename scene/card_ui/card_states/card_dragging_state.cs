@@ -47,26 +47,34 @@ public partial class card_dragging_state : card_state
 		var mouse_motion = @event is InputEventMouseMotion;
 		var cancel = @event.IsActionPressed("鼠标右键");
 		var confirm = @event.IsActionReleased("鼠标左键") || @event.IsActionPressed("鼠标左键");
-		if (single_targeted && mouse_motion && cardUi.targets.Count > 0)
+		GD.Print($"[Debug] single_targeted={single_targeted}, mouse_motion={mouse_motion}, targets={cardUi.targets.Count}, CanDrop={cardUi.CanDrop}, confirm={confirm}");
+
+		if (single_targeted && cardUi.targets.Count > 0 && cardUi.CanDrop && confirm)
 		{
+			GD.Print("进瞄准状态");
+			events.instance.EmitSignal(events.SignalName.CardSlotRequested);
 			EmitSignal(SignalName.TransitionRequested, this, (long)card_state.State.AIMING);
 			return;
 		}
 
 		if (mouse_motion)
 		{
-			cardUi.GlobalPosition = cardUi.GetGlobalMousePosition() - cardUi.PivotOffset;
+			cardUi.GlobalPosition = cardUi.GetGlobalMousePosition() - cardUi.PivotOffset;//卡牌跟随鼠标
 		}
 		if (cancel)
 		{
 			EmitSignal(SignalName.TransitionRequested, this, (long)(int)card_state.State.BASE);
 
 		}
-		else if (minimum_drag_time_elapsed && confirm)
+		else if (confirm && cardUi.CanDrop)//minimum_drag_time_elapsed不知道干啥的，先放起来
 		{
-			GetViewport().SetInputAsHandled();
-			EmitSignal(SignalName.TransitionRequested, this, (long)(int)card_state.State.RELEASED);
+			GD.Print("进入牌阵储存状态");
+			events.instance.EmitSignal(events.SignalName.CardSlotRequested);
+			// GetViewport().SetInputAsHandled();
+			EmitSignal(SignalName.TransitionRequested, this, (long)(int)card_state.State.INSLOT);
+			return;
 		}
+		
 
 	}
 
